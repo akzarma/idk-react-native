@@ -1,82 +1,93 @@
 [
   {
     "id": "msg-1",
-    "sender": "American Express",
-    "subject": "Your monthly statement is ready",
-    "snippet": "Statement balance $1,245.87 due Oct 25. Make a payment to avoid late fees.",
-    "body": "Hi Akshay, your American Express Platinum statement is ready. Minimum payment due is $85.17. View the full statement and schedule your payment from the Amex app.",
-    "receivedAt": "2025-10-20T09:12:00Z"
+    "sender": "Uber Eats",
+    "subject": "Purchase Successful - Uber Eats",
+    "body": "Your order has been confirmed. Amount of $2,50.00 has been debited from your card ending in 4242.",
+    "receivedAt": "2025-10-20T12:30:00Z"
   },
   {
     "id": "msg-2",
-    "sender": "Amazon",
-    "subject": "Your order of smart lights has shipped",
-    "snippet": "Order #114-88321 placed on Oct 18 has shipped. Track your package arriving Friday.",
-    "body": "Thanks for shopping with Amazon. Your purchase total was $59.99 for Philips Hue Smart Bulbs. View tracking and manage delivery preferences in your orders dashboard.",
-    "receivedAt": "2025-10-20T08:03:00Z"
+    "sender": "US Skydiving",
+    "subject": "Purchase Successful - US Skydiving",
+    "body": "Thank you for booking with us! Payment of $600.00 has been charged to your card ending in 4242.",
+    "receivedAt": "2025-10-20T10:15:00Z"
   },
   {
     "id": "msg-3",
-    "sender": "Delta Airlines",
-    "subject": "Upcoming flight to Seattle – itinerary details",
-    "snippet": "Flight DL2345 departing SFO 7:05 AM, arriving SEA 9:15 AM. Check in opens 24 hours prior.",
-    "body": "Hello Akshay, your Delta flight confirmation includes seat 14A, boarding group 2. Review hotel and rideshare options in the Fly Delta app.",
-    "receivedAt": "2025-10-19T21:54:00Z"
+    "sender": "Amazon",
+    "subject": "Purchase Successful - Amazon",
+    "body": "Your order for Philips Hue Smart Bulbs has been confirmed. Total amount $59.99 debited from your card ending in 4242.",
+    "receivedAt": "2025-10-20T08:03:00Z"
   },
   {
     "id": "msg-4",
+    "sender": "Lyft",
+    "subject": "Purchase Successful - Lyft",
+    "body": "Your ride has been completed. Amount of $18.21 has been charged to your card ending in 4242.",
+    "receivedAt": "2025-10-19T22:16:00Z"
+  },
+  {
+    "id": "msg-5",
+    "sender": "Starbucks",
+    "subject": "Purchase Successful - Starbucks",
+    "body": "Thank you for your purchase! $12.45 has been debited from your card ending in 4242.",
+    "receivedAt": "2025-10-19T18:30:00Z"
+  },
+  {
+    "id": "msg-6",
+    "sender": "Apple Store",
+    "subject": "Purchase Successful - Apple",
+    "body": "Your purchase of AirPods Pro is confirmed. Amount $249.00 charged to your card ending in 4242.",
+    "receivedAt": "2025-10-19T14:20:00Z"
+  },
+  {
+    "id": "msg-7",
+    "sender": "Uber Eats",
+    "subject": "Purchase Successful - Uber Eats",
+    "body": "Your food order has been delivered. Total of $34.50 debited from your card ending in 4242.",
+    "receivedAt": "2025-10-18T19:45:00Z"
+  },
+  {
+    "id": "msg-8",
+    "sender": "Netflix",
+    "subject": "Purchase Successful - Netflix",
+    "body": "Your subscription has been renewed. Amount $15.99 has been charged to your card ending in 4242.",
+    "receivedAt": "2025-10-18T09:00:00Z"
+  },
+  {
+    "id": "msg-9",
+    "sender": "Delta Airlines",
+    "subject": "Upcoming flight to Seattle – itinerary details",
+    "body": "Hello Akshay, your Delta flight confirmation includes seat 14A, boarding group 2. Flight DL2345 departing SFO 7:05 AM, arriving SEA 9:15 AM.",
+    "receivedAt": "2025-10-19T21:54:00Z"
+  },
+  {
+    "id": "msg-10",
     "sender": "Notion",
     "subject": "Agenda: Growth squad weekly sync",
-    "snippet": "Reminder: project status review tomorrow at 2:00 PM. Join via Google Meet.",
     "body": "Team, please add your updates to the Notion page ahead of tomorrow's status meeting. We'll cover roadmap milestones, blockers, and hiring updates.",
     "receivedAt": "2025-10-19T19:05:00Z"
   },
   {
-    "id": "msg-5",
+    "id": "msg-11",
     "sender": "Mom",
     "subject": "Dinner on Saturday?",
-    "snippet": "Hey! Are you free for dinner with the family this weekend?",
     "body": "Hi beta, we're planning a small family dinner on Saturday evening around 7. Let me know if you and Priya can join. Would love to catch up!",
     "receivedAt": "2025-10-18T16:44:00Z"
   },
   {
-    "id": "msg-6",
+    "id": "msg-12",
     "sender": "Coinbase",
     "subject": "Security alert: new sign-in detected",
-    "snippet": "We noticed a login to your Coinbase account from a new device in San Francisco.",
-    "body": "If this was you, you can disregard this message. Otherwise, secure your account immediately and review recent activity. Two-factor authentication is recommended.",
+    "body": "We noticed a login to your Coinbase account from a new device in San Francisco. If this was you, you can disregard this message. Otherwise, secure your account immediately.",
     "receivedAt": "2025-10-18T12:30:00Z"
   },
   {
-    "id": "msg-7",
-    "sender": "Lyft",
-    "subject": "Your ride with Taylor – receipt",
-    "snippet": "Thanks for riding with Lyft. Total charged $18.21 ending in 4242.",
-    "body": "Trip summary: pickup Market Street, drop-off Folsom Street. Subtotal $17.02, taxes & fees $1.19. View detailed receipt in your account.",
-    "receivedAt": "2025-10-18T02:16:00Z"
-  },
-  {
-    "id": "msg-8",
+    "id": "msg-13",
     "sender": "Ticketmaster",
     "subject": "Presale: ODESZA live in Oakland",
-    "snippet": "Exclusive fan presale starts tomorrow at 10 AM PT. Use code WAVE to unlock seats.",
     "body": "ODESZA is coming back to the Bay. Presale tickets go live tomorrow. Set a reminder and secure floor seats before the general sale.",
     "receivedAt": "2025-10-17T23:04:00Z"
-  },
-  {
-    "id": "msg-9",
-    "sender": "Swiggy",
-    "subject": "Your order from Swiggy is ready. Thanks for making a payment of 2500.00 Dollars",
-    "snippet": "Your order #123456 is ready for pickup at Swiggy.",
-    "body": "Your order from Swiggy is ready for pickup. Thank you for choosing us! The bill amount you paid is 2500.00 Dollars",
-    "receivedAt": "2025-10-17T23:04:00Z"
-  },
-  {
-    "id": "msg-10",
-    "sender": "US Skydiving",
-    "subject": "Your skydiving session is confirmed",
-    "snippet": "Your skydiving session is confirmed for tomorrow at 10:00 AM.",
-    "body": "Your skydiving session is confirmed for tomorrow at 10:00 AM. Thank you for choosing us! The bill amount you paid is 600 Dollars",
-    "receivedAt": "2025-10-17T10:00:00Z"
   }
 ]

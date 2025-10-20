@@ -316,6 +316,7 @@ const AnalyticsScreen = ({ onBack }: AnalyticsScreenProps) => {
               chartConfig={chartConfig}
               style={styles.chart}
               yAxisLabel="$"
+              yAxisSuffix=""
               fromZero={true}
               showValuesOnTopOfBars={true}
               withInnerLines={false}
