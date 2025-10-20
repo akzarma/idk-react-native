@@ -260,8 +260,8 @@ const AnalyticsScreen = ({ onBack }: AnalyticsScreenProps) => {
           </View>
         </View>
 
-        {/* Spending Trend Chart */}
-        {dailySpendData.labels.length > 0 && (
+        {/* Spending Trend Chart - Only show for week/month/year */}
+        {timeFilter !== "today" && dailySpendData.labels.length > 0 && (
           <View style={styles.chartCard}>
             <Text style={styles.chartTitle}>Spending Trend</Text>
             <LineChart
@@ -284,10 +284,14 @@ const AnalyticsScreen = ({ onBack }: AnalyticsScreenProps) => {
           </View>
         )}
 
-        {/* Category Distribution */}
+        {/* Category Distribution - Featured for Today */}
         {pieChartData.length > 0 && (
           <View style={styles.chartCard}>
-            <Text style={styles.chartTitle}>Category Distribution</Text>
+            <Text style={styles.chartTitle}>
+              {timeFilter === "today"
+                ? "Today's Spending by Category"
+                : "Category Distribution"}
+            </Text>
             <PieChart
               data={pieChartData}
               width={screenWidth - 48}
