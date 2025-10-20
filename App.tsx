@@ -79,12 +79,7 @@ const getErrorMessage = (value: unknown) => {
 };
 
 const buildEmailPrompt = (email: Email) => {
-  return [
-    `Message ID: ${email.id}`,
-    `Subject: ${email.subject}`,
-    "Body:",
-    email.body,
-  ].join("\n");
+  return ["Body:", email.body].join("\n");
 };
 
 const useEdgeModel = (systemPrompt: string) => {
@@ -176,7 +171,7 @@ const HomeScreen = ({
       ]}
       edges={["top", "bottom"]}
     >
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
       <View style={styles.homeContent}>
         <View>
           <Text style={styles.homeTitle}>Edge AI Playground</Text>
@@ -315,7 +310,7 @@ const ChatScreen = ({ onBack }: ChatScreenProps) => {
       ]}
       edges={["top", "bottom"]}
     >
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : undefined}
         style={styles.container}
@@ -330,7 +325,7 @@ const ChatScreen = ({ onBack }: ChatScreenProps) => {
           </View>
           <View style={styles.statusRow}>
             {!isReady || isGenerating ? (
-              <ActivityIndicator size="small" color="#A1B7FF" />
+              <ActivityIndicator size="small" color="#3B82F6" />
             ) : null}
             <Text
               style={[
@@ -541,7 +536,7 @@ const EmailAnalyzerScreen = ({ onBack }: EmailAnalyzerScreenProps) => {
       ]}
       edges={["top", "bottom"]}
     >
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
       <View style={styles.emailContainer}>
         <View style={styles.header}>
           <View style={styles.headerTopRow}>
@@ -557,7 +552,7 @@ const EmailAnalyzerScreen = ({ onBack }: EmailAnalyzerScreenProps) => {
           </Text>
           <View style={styles.statusRow}>
             {(!isReady || isGenerating || analysisStatus === "running") && (
-              <ActivityIndicator size="small" color="#A1B7FF" />
+              <ActivityIndicator size="small" color="#3B82F6" />
             )}
             <Text
               style={[
@@ -750,11 +745,11 @@ export default App;
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "#0F172A",
+    backgroundColor: "#F8FAFC",
   },
   container: {
     flex: 1,
-    backgroundColor: "#0F172A",
+    backgroundColor: "#F8FAFC",
   },
   homeContent: {
     flex: 1,
@@ -765,39 +760,45 @@ const styles = StyleSheet.create({
   homeTitle: {
     fontSize: 28,
     fontWeight: "700",
-    color: "#F8FAFC",
+    color: "#0F172A",
     marginBottom: 8,
   },
   homeSubtitle: {
     fontSize: 15,
-    color: "#A0AEC0",
+    color: "#64748B",
   },
   homeCardGrid: {
     gap: 16,
   },
   homeCard: {
-    backgroundColor: "#1E293B",
+    backgroundColor: "#FFFFFF",
     borderRadius: 20,
     paddingHorizontal: 20,
     paddingVertical: 24,
     borderWidth: 1,
-    borderColor: "#2E3A4F",
+    borderColor: "#E2E8F0",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.05,
+    shadowRadius: 8,
+    elevation: 3,
   },
   homeCardTitle: {
     fontSize: 20,
     fontWeight: "700",
-    color: "#F8FAFC",
+    color: "#0F172A",
     marginBottom: 6,
   },
   homeCardSubtitle: {
     fontSize: 14,
-    color: "#CBD5F5",
+    color: "#64748B",
     lineHeight: 20,
   },
   header: {
     paddingHorizontal: 20,
     paddingTop: 12,
     paddingBottom: 8,
+    backgroundColor: "#F8FAFC",
   },
   headerTopRow: {
     flexDirection: "row",
@@ -806,13 +807,15 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   backButton: {
-    backgroundColor: "#1E293B",
+    backgroundColor: "#FFFFFF",
     paddingHorizontal: 16,
     paddingVertical: 8,
     borderRadius: 999,
+    borderWidth: 1,
+    borderColor: "#E2E8F0",
   },
   backButtonLabel: {
-    color: "#E2E8F0",
+    color: "#3B82F6",
     fontWeight: "600",
     fontSize: 14,
   },
@@ -822,7 +825,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 22,
     fontWeight: "700",
-    color: "#F8FAFC",
+    color: "#0F172A",
     marginBottom: 4,
   },
   statusRow: {
@@ -832,21 +835,21 @@ const styles = StyleSheet.create({
   },
   status: {
     fontSize: 14,
-    color: "#E2E8F0",
+    color: "#334155",
   },
   statusReady: {
-    color: "#4ADE80",
+    color: "#10B981",
   },
   statusBusy: {
-    color: "#FACC15",
+    color: "#F59E0B",
   },
   statusError: {
-    color: "#F87171",
+    color: "#EF4444",
   },
   cacheHint: {
     marginTop: 4,
     fontSize: 12,
-    color: "#94A3B8",
+    color: "#64748B",
   },
   messagesContainer: {
     flexGrow: 1,
@@ -869,11 +872,13 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   },
   assistantBubble: {
-    backgroundColor: "#1E293B",
+    backgroundColor: "#F1F5F9",
     borderBottomLeftRadius: 4,
+    borderWidth: 1,
+    borderColor: "#E2E8F0",
   },
   userBubble: {
-    backgroundColor: "#2563EB",
+    backgroundColor: "#3B82F6",
     borderBottomRightRadius: 4,
   },
   messageText: {
@@ -881,19 +886,19 @@ const styles = StyleSheet.create({
     lineHeight: 20,
   },
   assistantText: {
-    color: "#E2E8F0",
+    color: "#1E293B",
   },
   userText: {
-    color: "#F8FAFC",
+    color: "#FFFFFF",
   },
   inputRow: {
     flexDirection: "row",
     alignItems: "flex-end",
     paddingHorizontal: 16,
     paddingVertical: 12,
-    borderTopWidth: StyleSheet.hairlineWidth,
-    borderTopColor: "#1E293B",
-    backgroundColor: "#111827",
+    borderTopWidth: 1,
+    borderTopColor: "#E2E8F0",
+    backgroundColor: "#FFFFFF",
     gap: 12,
   },
   input: {
@@ -903,15 +908,17 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 8,
     borderRadius: 12,
-    backgroundColor: "#1E293B",
-    color: "#F8FAFC",
+    backgroundColor: "#F8FAFC",
+    borderWidth: 1,
+    borderColor: "#E2E8F0",
+    color: "#0F172A",
     fontSize: 15,
   },
   sendButton: {
     height: 44,
     paddingHorizontal: 16,
     borderRadius: 12,
-    backgroundColor: "#2563EB",
+    backgroundColor: "#3B82F6",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -919,12 +926,12 @@ const styles = StyleSheet.create({
     opacity: 0.4,
   },
   sendLabel: {
-    color: "#F8FAFC",
+    color: "#FFFFFF",
     fontWeight: "600",
     fontSize: 15,
   },
   errorText: {
-    color: "#F87171",
+    color: "#EF4444",
     textAlign: "center",
     paddingHorizontal: 16,
     marginBottom: 4,
@@ -934,7 +941,7 @@ const styles = StyleSheet.create({
   },
   screenIntro: {
     fontSize: 14,
-    color: "#A0AEC0",
+    color: "#64748B",
     marginBottom: 12,
   },
   actionRow: {
@@ -950,14 +957,14 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: "#334155",
+    borderColor: "#E2E8F0",
     paddingVertical: 12,
     paddingHorizontal: 16,
-    backgroundColor: "#111827",
+    backgroundColor: "#FFFFFF",
   },
   secondaryButtonText: {
     textAlign: "center",
-    color: "#E2E8F0",
+    color: "#334155",
     fontWeight: "600",
     fontSize: 14,
   },
@@ -966,14 +973,14 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     paddingVertical: 12,
     paddingHorizontal: 16,
-    backgroundColor: "#2563EB",
+    backgroundColor: "#3B82F6",
     alignItems: "center",
   },
   primaryButtonDisabled: {
     opacity: 0.5,
   },
   primaryButtonText: {
-    color: "#F8FAFC",
+    color: "#FFFFFF",
     fontWeight: "700",
     fontSize: 15,
   },
@@ -985,16 +992,16 @@ const styles = StyleSheet.create({
   progressBar: {
     height: 10,
     borderRadius: 6,
-    backgroundColor: "#1E293B",
+    backgroundColor: "#E2E8F0",
     overflow: "hidden",
   },
   progressFill: {
     height: "100%",
-    backgroundColor: "#38BDF8",
+    backgroundColor: "#3B82F6",
   },
   progressLabel: {
     fontSize: 13,
-    color: "#CBD5F5",
+    color: "#64748B",
   },
   resultsScroll: {
     flex: 1,
@@ -1005,49 +1012,59 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   placeholderText: {
-    color: "#64748B",
+    color: "#94A3B8",
     fontSize: 14,
     textAlign: "center",
     marginTop: 24,
   },
   resultCard: {
-    backgroundColor: "#1E293B",
+    backgroundColor: "#FFFFFF",
     borderRadius: 16,
     padding: 16,
     borderWidth: 1,
-    borderColor: "#273144",
+    borderColor: "#E2E8F0",
     gap: 6,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.05,
+    shadowRadius: 4,
+    elevation: 2,
   },
   resultId: {
     fontSize: 13,
     fontWeight: "600",
-    color: "#7DD3FC",
+    color: "#3B82F6",
     textTransform: "uppercase",
   },
   resultAmount: {
     fontSize: 16,
     fontWeight: "700",
-    color: "#F8FAFC",
+    color: "#0F172A",
   },
   resultMeta: {
     fontSize: 13,
-    color: "#CBD5F5",
+    color: "#64748B",
   },
   modalOverlay: {
     flex: 1,
-    backgroundColor: "rgba(15, 23, 42, 0.85)",
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
     justifyContent: "center",
     padding: 24,
   },
   modalContent: {
-    backgroundColor: "#0F172A",
+    backgroundColor: "#FFFFFF",
     borderRadius: 18,
     padding: 20,
     borderWidth: 1,
-    borderColor: "#273144",
+    borderColor: "#E2E8F0",
     maxHeight: "85%",
     width: "100%",
     flexShrink: 1,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.15,
+    shadowRadius: 12,
+    elevation: 8,
   },
   modalHeader: {
     flexDirection: "row",
@@ -1058,16 +1075,18 @@ const styles = StyleSheet.create({
   modalTitle: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#F8FAFC",
+    color: "#0F172A",
   },
   modalClose: {
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 999,
-    backgroundColor: "#1E293B",
+    backgroundColor: "#F1F5F9",
+    borderWidth: 1,
+    borderColor: "#E2E8F0",
   },
   modalCloseLabel: {
-    color: "#E2E8F0",
+    color: "#334155",
     fontWeight: "600",
     fontSize: 13,
   },
@@ -1085,13 +1104,13 @@ const styles = StyleSheet.create({
   modalHighlight: {
     fontSize: 15,
     fontWeight: "600",
-    color: "#38BDF8",
+    color: "#3B82F6",
     marginBottom: 12,
   },
   modalLabel: {
     fontSize: 13,
     fontWeight: "600",
-    color: "#94A3B8",
+    color: "#64748B",
     marginTop: 16,
     marginBottom: 8,
     textTransform: "uppercase",
@@ -1100,8 +1119,10 @@ const styles = StyleSheet.create({
   codeBlock: {
     fontFamily: Platform.select({ ios: "Menlo", android: "monospace" }),
     fontSize: 12,
-    color: "#E2E8F0",
-    backgroundColor: "#111827",
+    color: "#1E293B",
+    backgroundColor: "#F8FAFC",
+    borderWidth: 1,
+    borderColor: "#E2E8F0",
     borderRadius: 12,
     padding: 12,
     lineHeight: 18,

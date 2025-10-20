@@ -3,7 +3,7 @@
     "id": "msg-1",
     "sender": "Uber Eats",
     "subject": "Purchase Successful - Uber Eats",
-    "body": "Your order has been confirmed. Amount of $2,50.00 has been debited from your card ending in 4242.",
+    "body": "Your order has been confirmed. Amount of $250.00 has been debited from your card ending in 4242.",
     "receivedAt": "2025-10-20T12:30:00Z"
   },
   {
